@@ -34,5 +34,16 @@ const staffDatabase = [
       }
     ];
   
-  console.log(staffDatabase);
+//   console.log(staffDatabase);
+let newDom = document.getElementById("dom");
   
+  for (let i = 0; i < staffDatabase.length; i++) {
+    let newDiv = document.createElement("div");
+    newDiv.setAttribute("class", "idBody");
+
+    let companyTitle = document.createElement("h3");
+    companyTitle.setAttribute("class", "headerTitle");
+    companyTitle.innerHTML = staffDatabase[i].companyName;
+    newDiv.appendChild(companyTitle)
+
+  }
