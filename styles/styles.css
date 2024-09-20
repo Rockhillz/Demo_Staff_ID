@@ -1,6 +1,12 @@
+#idMain {
+    display: flex;
+    
+}
+
 #dom {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    /* flex-direction: co; */
     justify-content: center;
 }
 
@@ -9,5 +15,17 @@
     border: 2px solid black;
     width: 300px;
     height: 250px;
+    margin: 5px;
     
+}
+
+.headerTitle {
+    text-align: center;
+    background-color: blue;
+}
+
+#summit {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
