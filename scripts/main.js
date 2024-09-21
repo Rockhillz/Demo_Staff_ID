@@ -38,6 +38,8 @@ const staffDatabase = [
     bloodGroup: "B+"
   }
 ]
+
+
 // grabbing form by id
 // let fullname = document.getElementById("name").value;
 // let position = document.getElementById("position").value;
@@ -46,6 +48,8 @@ const staffDatabase = [
 // let expired = document.getElementById("expDate").value;
 // let bloodGroup = document.getElementById("blood").value;
 // let clickBtn = document.getElementById("summit").value;
+
+
 let newForm = document.getElementById("summitForm")
 console.log(newForm)
 
@@ -63,9 +67,9 @@ function pushToArray(e) {
     bloodGroup: newForm.blood.value
 
   }
-  console.log(newObj)
+
   staffDatabase.push(newObj)
-  console.log(staffDatabase)
+  addCards()
 
   
 }
@@ -73,10 +77,11 @@ function pushToArray(e) {
 newForm.addEventListener("submit", pushToArray);
 
 
-// console.log();
-// console.log(staffDatabase);
-let newDom = document.getElementById("dom");
+function addCards() {
+  let newDom = document.getElementById("dom");
   
+  // Clear the cards to avoid duplicate
+  newDom.innerHTML = "";
   for (let i = 0; i < staffDatabase.length; i++) {
     let newDiv = document.createElement("div");
     newDiv.setAttribute("class", "idBody");
@@ -94,4 +99,8 @@ let newDom = document.getElementById("dom");
 
 
     newDom.appendChild(newDiv)
+    
   }
+
+}
+
