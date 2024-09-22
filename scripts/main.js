@@ -62,7 +62,7 @@ function pushToArray(e) {
   e.preventDefault();
   console.log("form submit")
   const newObj =  {
-    // image: "https://example.com/images/staff2.jpg",
+    image: newForm.idImage.value,
     name: newForm.name.value,
     position: newForm.position.value,
     id: newForm.idNumber.value,
@@ -93,7 +93,7 @@ function addCards() {
     
     let companyTitle = document.createElement("h3");
     companyTitle.setAttribute("class", "headerTitle");
-    companyTitle.innerHTML = staffDatabase[i].companyName;
+    companyTitle.innerHTML = "GOMYCODE";
     newDiv.appendChild(companyTitle)
 
 
@@ -104,7 +104,7 @@ function addCards() {
 
     let staffName =document.createElement("h2");
     staffName.setAttribute("class", "workerName");
-    staffName.innerHTML =staffDatabase[i].name;
+    staffName.innerHTML = staffDatabase[i].name;
     newDiv.appendChild(staffName);
 
     let staffOccupation = document.createElement("h4");
@@ -113,24 +113,27 @@ function addCards() {
     newDiv.appendChild(staffOccupation);
 
     let idNum = document.createElement("p");
-    idNum.innerHTML = "iD No: "+ staffDatabase[i].id;
+    idNum.innerHTML = "ID No: "+ staffDatabase[i].id;
     newDiv.appendChild(idNum);
 
     let idDate = document.createElement("p");
-    idDate.innerHTML = "iD Dt: "+ staffDatabase[i].joinDate;
+    idDate.innerHTML = "Joined: "+ staffDatabase[i].joinDate;
     newDiv.appendChild(idDate);
 
     let idEx = document.createElement("p");
-    idEx.innerHTML = "iD Ex: "+ staffDatabase[i].expirationDate;
+    idEx.innerHTML = "Expires: "+ staffDatabase[i].expirationDate;
     newDiv.appendChild(idEx);
     
     let blood = document.createElement("p");
-    blood.innerHTML = "iD No: "+ staffDatabase[i].bloodGroup;
+    blood.innerHTML = "Blood: "+ staffDatabase[i].bloodGroup;
     newDiv.appendChild(blood);
 
     let borderBelow = document.createElement("div");
     borderBelow.setAttribute("class", "lineBelow");
+    borderBelow.innerHTML = "www.gomycode.com";
     newDiv.appendChild(borderBelow)
+
+    
 
 
     newDom.appendChild(newDiv);

@@ -44,6 +44,7 @@
     margin:5px auto;
     color:  rgb(7, 7, 175);
 }
+
 .staffPosition {
     color:  rgb(1, 1, 84);
     margin-top: 3px;
@@ -52,13 +53,20 @@
     text-underline-offset:10px; 
     text-decoration-thickness: 3px;
 }
+
 .lineBelow {
 
     background-color: rgb(7, 7, 175);
     padding: 8px 5px;
     margin-top: 19px !important;
     margin: 8px  auto;
+    height: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 p{
-    line-height: 3px;
+    line-height: 5px;
 }
